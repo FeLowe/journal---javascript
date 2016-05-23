@@ -7,11 +7,13 @@ $(document).ready(function(){
     event.preventDefault();
     var titleInput = $('#title').val();
     var bodyInput = $('#body').val();
+    var countWords = bodyInput.split(" ");
+    var totalWords = countWords.length;
     // var dateInput = $('#date').val();
 
     var newEntry = new Entry(titleInput, bodyInput);
 
-    $('#output').append('<li>' + titleInput + '<br>' + bodyInput+ '<br>' + moment().format("MMMM Do YYYY, h:mm:ss a") + '</li>');
+    $('#output').append('<li>' + '<strong>' + 'Title: ' + '</strong>' + titleInput +'<br>' + '<strong>' + "Diary entry: " + '</strong>' + bodyInput + '<br>' + '<strong>' + "Date: " + '</strong>' + moment().format('MMMM Do YYYY, h:mm:ss a') + '<br>' + '<strong>' + 'Total words: ' + '</strong>'  + totalWords + '</li>');
 
   });
 });
