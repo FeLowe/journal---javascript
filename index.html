@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="build/js/vendor.min.js"></script>
+    <link rel="stylesheet" href="build/css/vendor.css">
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Journal</title>
   </head>
   <body>
+    <div class="container">
     <form id="journal">
-      <label for="entry"><h2>My Dairy</h2></label><br>
-      <input id="title"type="text" name="title" placeholder="title"><br>
-      <textarea id="body" type="text" placeholder="your message here"></textarea><br>
-      <!-- <input id="date" type="date" name="date" placeholder="date"><br> -->
-      <button type="submit">Submit</button>
+      <div class="form-group">
+        <label for="entry"><h2>My Dairy</h2></label><br>
+        <input id="title"type="text" name="title" placeholder="title"><br>
+        <textarea id="body" type="text" placeholder="your message here"></textarea><br>
+        <button class="btn-success" type="submit">Submit</button>
+      </div>
     </form>
     <ul id="output"></ul>
+  </div>
   </body>
 </html>

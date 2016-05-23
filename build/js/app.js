@@ -19,19 +19,19 @@ $(document).ready(function(){
 });
 
 },{"./../js/journal.js":2,"moment":3}],2:[function(require,module,exports){
-var moment = require('moment');
+// var moment = require('moment');
 
 exports.Entry = function(title, body) {
   this.title = title;
   this.body = body;
-  this.date = moment().format("YYYY MM DD");
+  // this.date = moment().format("YYYY MM DD");
 };
 
 exports.Entry.prototype.read = function() {
   return this.title + ", " + " Dear diary, " + this.body + " <br> " + this.date;
 };
 
-},{"moment":3}],3:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 //! moment.js
 //! version : 2.13.0
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
