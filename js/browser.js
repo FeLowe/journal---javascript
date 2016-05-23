@@ -1,3 +1,4 @@
+var moment = require('moment');
 var Entry = require('./../js/journal.js').Entry;
 
 $(document).ready(function(){
@@ -5,11 +6,11 @@ $(document).ready(function(){
     event.preventDefault();
     var titleInput = $('#title').val();
     var bodyInput = $('#body').val();
-    var dateInput = $('#date').val();
+    // var dateInput = $('#date').val();
 
-    var newEntry = new Entry(titleInput, bodyInput, dateInput);
+    var newEntry = new Entry(titleInput, bodyInput);
 
-    $('#output').append('<li>' + titleInput + '<br>' + bodyInput + '<br />' + dateInput + '</li>');
+    $('#output').append('<li>' + titleInput + '<br>' + bodyInput+ '<br>' + moment().format("MMMM Do YYYY, h:mm:ss a") + '</li>');
 
   });
 });

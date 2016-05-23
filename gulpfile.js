@@ -9,6 +9,7 @@ var del = require('del');
 var jshint = require('gulp-jshint');
 
 
+
 gulp.task('jsBrowserify', function() {
   return browserify({ entries: ['./js/browser.js'] })
     .bundle()
@@ -37,4 +38,4 @@ gulp.task('jshint', function() {
   return gulp.src(['js/*.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
-})
+});

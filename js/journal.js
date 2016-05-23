@@ -1,7 +1,9 @@
-exports.Entry = function(title, body, date) {
+var moment = require('moment');
+
+exports.Entry = function(title, body) {
   this.title = title;
   this.body = body;
-  this.date = date;
+  this.date = moment().format("YYYY MM DD");
 };
 
 exports.Entry.prototype.read = function() {
